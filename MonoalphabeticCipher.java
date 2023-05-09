@@ -1,12 +1,9 @@
 import java.util.HashMap;
 
 public class MonoalphabeticCipher implements Cipher {
-    HashMap<Character, Character> encoder = new HashMap<>();
-    HashMap<Character, Character> decoder = new HashMap<>();
+    private final HashMap<Character, Character> encoder = new HashMap<>();
+    private final HashMap<Character, Character> decoder = new HashMap<>();
     public MonoalphabeticCipher(String key) {
-        setKey(key);
-    }
-    public void setKey(String key) {
         StringBuilder setKeys = new StringBuilder();
         for (String c : key.toLowerCase().split("")) {
             if (!setKeys.toString().contains(c)) {
