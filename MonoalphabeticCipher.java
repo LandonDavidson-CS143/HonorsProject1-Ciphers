@@ -2,25 +2,25 @@ import java.util.HashMap;
 
 public class MonoalphabeticCipher implements Cipher {
     HashMap<Character, Character> encoder = new HashMap<>();
-    HashMap<Character, Character> decoder = new HashMap<Character, Character>();
+    HashMap<Character, Character> decoder = new HashMap<>();
     public MonoalphabeticCipher(String key) {
         setKey(key);
     }
     public void setKey(String key) {
-        String setKeys = "";
+        StringBuilder setKeys = new StringBuilder();
         for (String c : key.toLowerCase().split("")) {
-            if (!setKeys.contains(c)) {
-                setKeys += c;
+            if (!setKeys.toString().contains(c)) {
+                setKeys.append(c);
             }
         }
         if (setKeys.length() < 26) {
             for (char i = 'a'; i < 'z' + 1; i++) {
-                if (!setKeys.contains(Character.toString(i))) {
-                    setKeys += i;
+                if (!setKeys.toString().contains(Character.toString(i))) {
+                    setKeys.append(i);
                 }
             }
         }
-        char[] keyChar = setKeys.toCharArray();
+        char[] keyChar = setKeys.toString().toCharArray();
         for (char c = 'a'; c < 'z' + 1; c++) {
             int i = c - 'a';
             encoder.put(c, keyChar[i]);
