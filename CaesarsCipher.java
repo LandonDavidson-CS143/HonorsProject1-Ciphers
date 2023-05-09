@@ -1,9 +1,8 @@
 public class CaesarsCipher implements Cipher {
-    private int shift;
+    private final int shift;
     public CaesarsCipher(int shift) {
-        setShift(shift);
+        this.shift = shift % 26;
     }
-    public void setShift(int shift) {this.shift = shift % 26;}
 
     @Override
     public String encode(String plainText) {
