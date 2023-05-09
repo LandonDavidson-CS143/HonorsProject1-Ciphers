@@ -1,12 +1,9 @@
 public class PigLatin implements Cipher {
-    String suffix;
+    private final String suffix;
     public PigLatin(String suffix) {
-        setSuffix(suffix);
-    }
-
-    public void setSuffix(String suffix) {
         this.suffix = suffix;
     }
+
     private boolean isVowel(char c) {
         return "AEIOUaeiou".contains(String.valueOf(c));
     }
