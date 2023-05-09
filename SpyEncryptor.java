@@ -5,17 +5,17 @@ public class SpyEncryptor {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Spy Encryptor 1.0\n---------------\n");
+    String exitOption = "0. Exit\n";
     String option1 = "1. Caesar's Cipher\n";
     String option2 = "2. Pig Latin\n";
     String option3 = "3. Monoalphabetic Cipher\n";
     String option4 = "4. Character Shift Cipher\n";
-    String option5 = "5. Exit\n";
-    String prompt = option1 + option2 + option3 + option4 + option5 + "Please Select an above option: ";
+    String prompt = exitOption + option1 + option2 + option3 + option4 + "Please Select an above option: ";
     while (true) {
       System.out.print("\n" + prompt);
       int choice = input.nextInt();
 
-      if (choice == 5) {
+      if (choice == 0) {
         System.out.println("Thank you for using Spy Encryptor");
         break;
       }
