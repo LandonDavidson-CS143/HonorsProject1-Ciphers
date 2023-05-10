@@ -1,7 +1,7 @@
 /*
 Name: Landon Davidson
 Section: 32768
-Program Name: SpyEncryptor
+Program Name: SpyEncoder
 
 Description: Simple number based user input system that allows the user to choose which cipher to use, whether
 are encoding or decoding, what their key is, and the text they want to process. To simplify the main loop
@@ -11,11 +11,11 @@ and returns the processed text.
 
 import java.util.Scanner;
 
-public class SpyEncryptor {
+public class SpyEncoder {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    System.out.println("Welcome to Spy Encryptor 1.0\n---------------");
+    System.out.println("Welcome to Spy Encoder 1.0\n---------------");
     String exitOption = "0. Exit\n";
     String option1 = "1. Caesar's Cipher\n";
     String option2 = "2. Pig Latin\n";
@@ -27,11 +27,11 @@ public class SpyEncryptor {
       int choice = input.nextInt();
 
       if (choice == 0) {
-        System.out.println("Thank you for using Spy Encryptor");
+        System.out.println("Thank you for using Spy Encoder");
         break;
       }
 
-      System.out.print("Are you (1) encrypting or (2) decrypting? ");
+      System.out.print("Are you (1) encoding or (2) decoding? ");
       int direction = input.nextInt();
       input.nextLine();
 
@@ -53,7 +53,7 @@ public class SpyEncryptor {
         }
         case 3 -> {
           System.out.println("You can either enter a full set of 26 unique scrambled letters, or just a word and the program will fill in the rest for you");
-          System.out.print("Enter the encryption key for your message: ");
+          System.out.print("Enter the encoding key for your message: ");
           String key = input.next();
           MonoalphabeticCipher mc = new MonoalphabeticCipher(key);
           System.out.println(encodeDecode(mc, text, direction));
@@ -63,6 +63,7 @@ public class SpyEncryptor {
           char key = input.next().charAt(0);
           CharacterShift cs = new CharacterShift(key);
           System.out.println(encodeDecode(cs, text, direction));
+          System.out.println("Note: even if your text only shows a couple characters, copy the entire line and it will still decode");
         }
       }
     }
