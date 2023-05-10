@@ -1,3 +1,13 @@
+/*
+Name: Landon Davidson
+Section: 32768
+Program Name: MonoalphabeticCipher
+
+Description: Implements Cipher interface. creates a scrambled unique set of letters out of the user inputted KEY, and
+maps the original alphabet to the new set.
+Ex: a KEY of "follow" would create "folwabcdeghijkmnpqrstuvxyz" by taking each unique letter from the KEY and places the
+remaining alphabet at the end of it to create a full set. Using this KEY, "happy" would turn into "dfnny".
+ */
 import java.util.HashMap;
 
 public class MonoalphabeticCipher implements Cipher {

@@ -1,3 +1,12 @@
+/*
+Name: Landon Davidson
+Section: 32768
+Program Name: CaesarsCipher
+
+Description: Implements the Cipher interface and shifts every letter in the input text KEY spots right in the alphabet.
+Ex: "ab", with the key 3 would turn into "de" and "z" would be "c".
+ */
+
 public class CaesarsCipher implements Cipher {
   private final int shift;
   public CaesarsCipher(int shift) {

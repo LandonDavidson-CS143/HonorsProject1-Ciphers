@@ -1,10 +1,21 @@
+/*
+Name: Landon Davidson
+Section: 32768
+Program Name: SpyEncryptor
+
+Description: Simple number based user input system that allows the user to choose which cipher to use, whether
+are encoding or decoding, what their key is, and the text they want to process. To simplify the main loop
+there is also the encodeDecode() method which takes the cipher, text, and whether it is encoding or decoding (direction)
+and returns the processed text.
+ */
+
 import java.util.Scanner;
 
 public class SpyEncryptor {
 
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
-    System.out.println("Welcome to Spy Encryptor 1.0\n---------------\n");
+    System.out.println("Welcome to Spy Encryptor 1.0\n---------------");
     String exitOption = "0. Exit\n";
     String option1 = "1. Caesar's Cipher\n";
     String option2 = "2. Pig Latin\n";

@@ -1,3 +1,13 @@
+/*
+Name: Landon Davidson
+Section: 32768
+Program Name: CharacterShift
+
+Description: Implements the Cipher Interface. Takes a single char as SHIFT and for each letter in the input text the
+SHIFT value is added to the letters char value to create the new char. Ex: the letter "e" has a char value of 101,
+so if your key was 'A' which has a value of 65, the "e" would turn into the char value 166.
+ */
+
 public class CharacterShift implements Cipher {
   private final char shift;
   public CharacterShift(char shift) {

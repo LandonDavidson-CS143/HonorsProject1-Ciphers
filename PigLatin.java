@@ -1,3 +1,12 @@
+/*
+Name: Landon Davidson
+Section: 32768
+Program Name: PigLatin
+
+Description: Implements the Cipher interface. Moves the first letter of each word to the end and adds SUFFIX to the end.
+Ex: "Happy" with teh SUFFIX "ay" would turn into "appyhay" and "turn" would be "urntay".
+ */
+
 public class PigLatin implements Cipher {
   private final String suffix;
   public PigLatin(String suffix) {
